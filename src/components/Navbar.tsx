@@ -1,6 +1,7 @@
 import {Container, Nav, Navbar as NavbarBs, Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {useShoppingCart} from "../context/ShoppingCartContext";
+
 export const Navbar = () => {
   const {openCart, cartQuantity} = useShoppingCart();
   return (
@@ -41,7 +42,7 @@ export const Navbar = () => {
                 bottom: 0,
                 right: 0,
               }}>
-              3
+              {cartQuantity}
             </div>
           </Button>
         )}
